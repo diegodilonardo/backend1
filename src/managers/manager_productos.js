@@ -45,16 +45,16 @@ class ProductManager {
 
   async update(obj, id) {
     try {
-      //array de usuarios
+      
       const products = await this.getAll();
-      //user encontrado
-      let prod = await this.getById(id); //si no lo encuentra, devuelve el error
-      // le asignamos los valores nuevos que legan por body
+      
+      let prod = await this.getById(id); 
+
       prod = { ...prod, ...obj };
-      //filtramos y sacamos el usuario original (linea 64)
+      
       const newArray = products.filter((prod) => prod.id !== id);
       newArray.push(prod);
-      //lo guardamos en el json
+      
       await fs.promises.writeFile(this.path, JSON.stringify(newArray));
       return prod;
     } catch (error) {

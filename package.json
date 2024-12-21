@@ -1,0 +1,16 @@
+{
+  "name": "proyecto_backend",
+  "version": "1.0.0",
+  "description": "Proyecto Backend I",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "type":"module",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "uuidv4": "^6.2.13"
+  }
+}
